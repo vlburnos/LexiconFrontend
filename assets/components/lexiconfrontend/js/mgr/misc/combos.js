@@ -1,6 +1,6 @@
 MODx.combo.lexiconFrontendTopic = function(config) {
     config = config || {};
-    Ext.applyIf(config,{
+    Ext.apply(config,{
         name: 'topic'
         ,hiddenName: 'topic'
         ,forceSelection: true
@@ -56,9 +56,9 @@ MODx.combo.lexiconFrontendLanguage = function(config) {
         ,editable: false
         ,allowBlank: false
         ,pageSize: 20
-        ,url: MODx.config.connectors_url+'system/language.php'
+        ,url: MODx.config.connector_url
         ,baseParams: {
-            action: 'getList'
+            action: 'system/language/getlist'
             ,'namespace': 'lexiconfrontend'
         }
     });
