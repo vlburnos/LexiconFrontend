@@ -1,7 +1,6 @@
 lexiconFrontend.panel.Home = function(config) {
     config = config || {};
-    
-    Ext.applyIf(config,{
+    Ext.apply(config,{
         id: 'lexiconfrontend-panel-home'
 		,cls: 'container'
         ,itemId: 'panel-home'
@@ -13,7 +12,8 @@ lexiconFrontend.panel.Home = function(config) {
             ,id: 'lexiconfrontend-home-header'
             ,itemId: 'home-header'
             ,cls: 'modx-page-header container'
-        },MODx.getPageStructure([{
+        },
+        {
             title: _('lf_title_tab')
             ,layout: 'form'
             ,items: [{
@@ -27,7 +27,8 @@ lexiconFrontend.panel.Home = function(config) {
                 ,title: ''
                 ,preventRender: true
             }]
-        }])]
+        }
+        ]
     });
     lexiconFrontend.panel.Home.superclass.constructor.call(this,config);
 };
