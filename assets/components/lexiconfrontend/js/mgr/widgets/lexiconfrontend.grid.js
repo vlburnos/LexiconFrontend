@@ -1,6 +1,6 @@
 lexiconFrontend.grid.Home = function(config) {
     config = config || {};
-    Ext.applyIf(config,{
+    Ext.apply(config,{
         id: 'lexiconfrontend-grid-home'
         ,url: lexiconFrontend.config.connector_url
         ,fields: ['name','value','namespace','topic','language','editedon','overridden']
